@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand Controlled Saturn</title>
+    <style>
+      /* Prevent accidental scrolling/zooming on mobile */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: black;
+        touch-action: none; /* Stops the "pull to refresh" and zoom gestures */
+      }
+
+      canvas {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+      #ui-overlay {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: #00ffff;
+        pointer-events: none;
+        text-shadow: 0 0 5px #000;
+      }
+      /* Keep the video hidden but accessible for MediaPipe */
+      video {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="ui-overlay">
+      <h1>Cosmos Controller</h1>
+      <p>Close your fist to form Saturn.</p>
+      <p>Release to explode.</p>
+    </div> -->
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
