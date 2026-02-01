@@ -192,7 +192,7 @@ function animate() {
   // Smooth material updates
   if (currentGesture === "like") {
     material.color.lerp(new THREE.Color(0xff4488), 0.1);
-    material.size = (isMobile ? 0.35 : 0.15) + Math.sin(time * 5) * 0.05;
+    material.size = (isMobile ? 0.1 : 0.05) + Math.sin(time * 5) * 0.05;
   } else if (currentGesture !== "none") {
     material.color.lerp(new THREE.Color(0x00ccff), 0.1);
   } else {
