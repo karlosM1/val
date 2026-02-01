@@ -34,7 +34,7 @@ function createCircleTexture() {
   const ctx = canvas.getContext("2d");
   const grad = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
   grad.addColorStop(0, "rgba(255,255,255,1)");
-  grad.addColorStop(1, "rgba(255,255,255,0)");
+  grad.addColorStop(1, "rgb(255, 255, 255)");
   ctx.fillStyle = grad;
   ctx.beginPath();
   ctx.arc(32, 32, 30, 0, Math.PI * 2);
@@ -128,11 +128,11 @@ geometry.setAttribute("position", new THREE.BufferAttribute(posArray, 3));
 const material = new THREE.PointsMaterial({
   size: isMobile ? 0.35 : 0.15,
   transparent: true,
-  opacity: 0.8,
+  opacity: 1,
   map: createCircleTexture(),
   blending: THREE.AdditiveBlending,
   depthWrite: false,
-  color: 0x666666,
+  color: 0xffffff,
 });
 const particleSystem = new THREE.Points(geometry, material);
 scene.add(particleSystem);
